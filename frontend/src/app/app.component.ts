@@ -1,7 +1,17 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'my-app',
-  template: `<h1>Hello {{name}}</h1>`,
+   templateUrl: 'app/views/home.html'
 })
-export class AppComponent  { name = 'Angular'; }
+
+export class AppComponent  {
+  public name:string = 'Angular';
+  public title:string;
+  public description:string;
+
+  constructor(){
+    this.title = 'App Favoritos';
+    this.description = ' Api para gestionar favoritos online';
+  }
+}
